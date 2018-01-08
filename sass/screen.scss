@@ -1,0 +1,1166 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+/*@import "media-queries";*/
+
+$bronze:#804000;
+
+$chocolate: #6E3700;
+
+$cartpadding: 15px;
+
+$cartpaddingsides: 5px;
+
+$headfont: 'Bellefair', serif;
+
+$pfont: 'Merriweather', serif;
+
+$cartfont: 'Roboto', sans-serif;
+
+$marker: 'Permanent Marker', cursive;
+
+$measure: 55px;
+
+$white: #ffffff;
+
+$back: #FFF7E8;
+
+$nav: #FFFDF5;
+
+$xsmall-width: 575.99px;
+
+$sm-min-width: 576px;
+
+$sm-max-width: 767.99px;
+
+$med-min-width: 768px;
+
+$med-max-width: 991.99px;
+
+$lg-min-width: 992px;
+
+$lg-max-width: 1199.99px;
+
+$xlg-width: 1200px;
+
+/*mobile and tablet mixins for reactivity*/
+
+@mixin xsm {
+
+	@media only screen and (max-width: #{$xsmall-width}){
+
+		@content;
+	}
+}
+
+@mixin sm {
+
+	@media only screen and (min-width:#{$sm-min-width}) and (max-width:#{$sm-max-width}){
+
+		@content;
+	}
+}
+
+@mixin med {
+
+	@media only screen and (min-width:#{$med-min-width}) and (max-width:#{$med-max-width}){
+
+		@content;
+	}
+
+}
+
+@mixin lg {
+
+	@media only screen and (min-width:#{$lg-min-width}) and (max-width:#{$lg-max-width}){
+
+		@content;
+	}
+
+}
+
+
+@mixin xlg {
+
+	@media only and (max-width: #{$xlg-width}){
+
+		@content;
+	}
+
+}
+
+body {
+
+	overflow-x: hidden;
+	background-color: $back;
+}
+
+
+/*container media queries*/
+
+	.container {
+
+
+		@include sm {
+
+			max-width: 100%;
+
+		}
+
+		@include xsm {
+
+			max-width: 100%;
+
+		}
+
+	}
+
+.navbar-toggler:not([disabled]):not(.disabled) {
+
+	@include sm {
+
+		margin-left: -50%;
+
+	}
+
+}
+
+
+/*brand*/
+
+.navbar-brand {
+
+	color:$bronze !important;
+	padding-right: 445px;
+
+}
+
+/* brand media queries*/
+
+
+
+.nav-link.dropdown-toggle, .li.navitem.dropdown, a.nav-link {
+
+		@include med {
+
+			text-align: center;
+		}
+
+		@include sm {
+
+			text-align: center;
+
+		}
+
+		@include xsm {
+
+			text-align: center;
+
+		}
+
+}
+
+
+
+.nav-link.dropdown-toggle, .li.nafvitem.dropdown, a.nav-link {
+
+		@include med {
+
+			text-align: center;
+		}
+
+		@include sm {
+
+			text-align: center;
+
+		}
+
+}
+
+/* cart */
+
+.cart {
+
+	font-family: $headfont;
+	font-size: 13px;
+	color:$white;
+	background-color: $bronze;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-right:$cartpaddingsides;
+	padding-left:$cartpaddingsides;
+
+	.cartlink {
+		margin-left:70%;
+
+		@include med {
+
+			margin-left: 80%;
+		}
+
+		@include sm {
+
+			margin-left: 75%;
+		}
+	}
+
+}
+
+/* dropdown menu visible*/
+
+.dropdown-menu.show {
+
+	width:300px;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.23), 0 6px 6px rgba(0,0,0,0.27);
+	text-align: center;
+
+
+	a {
+		color:rgba(0,0,0,.5);
+	}
+
+	a:hover{
+		text-decoration: none;
+		color:rgba(0,0,0,.7);
+		background-color: $nav !important;
+
+	}
+
+		@include med {
+
+			width:100%;
+			padding-top:10px !important;
+			padding-bottom:10px;
+			text-align: center;
+		}
+
+
+		@include sm {
+
+			width:100%;
+			padding-top:10px !important;
+			padding-bottom:10px;
+			text-align: center;
+
+		}
+
+		@include xsm {
+
+			max-width: 100%;
+
+		}
+
+}
+
+/*coupon*/
+
+.coupon {
+
+	background-color: $bronze;
+	font-family: $headfont;
+	padding:10px;
+	border: 15px $nav solid;
+	color:white;
+	text-align: center;
+
+
+	h1 {
+
+		font-family: $headfont;
+		font-size: 40px;
+	}
+
+	p {
+
+		font-family: $pfont;
+		font-size: 16px;
+		margin-top: 10px;
+	}
+
+}
+
+/*nav bg*/
+
+.bg-light {
+
+	background-color: $nav !important;
+}
+
+/*dropdown menu*/
+
+.dropdown-menu {
+	border:none !important;
+	background-color: $nav !important;
+	border-radius: 0px !important;
+
+}
+
+/*container fluid styles*/
+
+.container-fluid {
+	padding-right: 0px;
+    padding-left: 0px;
+
+}
+
+/*jubotron styles*/
+
+.jumbotron {
+
+	margin-bottom: 0rem;
+}
+
+
+.hero, .collectionHero {
+	background-position: 40% 40%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-top:320px;
+	padding-bottom: 55px;
+}
+
+/*hero styles*/
+
+.hero {
+
+	background-image: url(../images/home/hero.png);
+
+	@include sm {
+
+		padding: 0px;
+
+	}
+
+	@include xsm {
+
+		padding: 0px;
+
+	}
+
+	h1 {
+
+		font-size: 60px;
+		color:$white;
+		margin-right: 50px;
+		text-align: right;
+		font-family: $marker;
+
+		   @include xlg {
+
+				padding-top:10%;
+				padding-bottom: 5%;
+				font-size: 60px;
+
+
+			}
+
+
+		   @include med {
+
+				padding-top:10%;
+				padding-bottom: 5%;
+				font-size: 60px;
+			}
+
+			@include sm {
+
+				padding-top: 50px;
+				padding-bottom:50px;
+				font-size: 60px;
+				text-align: center;
+				padding-right: 15px;
+				padding-left: 15px;
+
+			}
+
+			@include xsm {
+
+				padding-top: 50px;
+				padding-bottom:50px;
+				font-size: 60px;
+				text-align: center;
+				padding-right: 15px;
+				padding-left: 15px;
+
+			}
+
+	}
+
+/*sm button media queries*/
+
+	button {
+		align-items: right;
+		margin-left: 72%;
+		margin-top: 20px;
+		font-family: $pfont;
+
+
+		@include med {
+
+			font-size:13px;
+			margin-left: 58%;
+		}
+
+	/*button sm*/
+
+		@include sm {
+
+			display: none;
+		}
+
+		@include xsm {
+
+			display: none;
+		}
+
+	}
+
+/*sm hero box */
+
+	.smhero {
+
+		display: none;
+
+
+		  @include sm {
+
+				width: 100%;
+				padding:25px;
+				font-family: $pfont;
+				font-size: 25px;
+				color:black;
+				display:block;
+				background-color: white;
+				text-align: center;
+
+			}
+
+			@include xsm {
+
+				width: 100%;
+				padding:25px;
+				font-family: $pfont;
+				font-size: 25px;
+				color:black;
+				display:block;
+				background-color: white;
+				text-align: center;
+
+			}
+
+	}
+
+}
+
+/*options code*/
+
+.men {
+	width:500px;
+	height:350px;
+	background-image: url(../images/home/mens.jpg);
+	background-position: 20% 20%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-top: 150px;
+
+}
+
+
+.women {
+	width:500px;
+	height:350px;
+	background-image: url(../images/home/women.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-top: 150px;
+}
+
+.accessories {
+	width:500px;
+	height:350px;
+	background-image: url(../images/home/accessories.jpg);
+	background-position: center;
+	background-size: 150%;
+	background-repeat: no-repeat;
+	padding-top: 150px;
+}
+
+.men:hover, .women:hover, .accessories:hover {
+
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+/*title styles*/
+
+.title {
+
+	color:$back;
+	font-family: $headfont;
+	font-size: 50px;
+	text-align: center;
+
+		@include lg {
+
+			font-size:40px;
+
+		}
+
+		@include med {
+
+			font-size:30px;
+
+		}
+
+		@include sm {
+
+			font-size: 25px;
+
+		}
+
+		@include xsm {
+
+			font-size: 25px;
+
+		}
+
+}
+
+/*wood container*/
+
+.woodshop, .woodhome {
+
+	background-image: url(../images/home/texture.jpg);
+	background-repeat: repeat-x;
+
+	}
+
+.woodhome {
+
+	margin-top: $measure;
+	padding:10px;
+
+		@include sm {
+
+			margin-top: 0px;
+			padding-left: 0px;
+			padding-right:0px;
+
+		}
+
+		@include xsm {
+
+			margin-top: 0px;
+			padding-left: 0px;
+			padding-right:0px;
+		}
+
+}
+
+
+/*features styles*/
+
+.features {
+
+	margin-top: 55px;
+
+	@include sm {
+
+			margin-top: 0px;
+
+		}
+
+	@include xsm {
+
+			margin-top: 0px;
+		}
+}
+
+
+/*ad styles*/
+
+.collection, .trend, .lookbook {
+
+	background-position: 20% 20%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-top:310px;
+	padding-left:250px;
+	margin-top: 45px;
+	padding-bottom: 80px;
+
+	@include sm {
+
+		padding-bottom: 0px;
+		padding-top: 0px;
+
+	}
+
+	@include xsm {
+
+		padding-bottom: 0px;
+		padding-top: 0px;
+
+	}
+}
+
+/*begin collection styles*/
+
+.collection {
+
+	background-image: url(../images/home/collection.png);
+	margin-top: 55px;
+	transition: all 0.6s cubic-bezier(.25,.8,.25,1);
+	box-shadow: inset 23px 20px 20px rgba(0,0,0,0.5);
+
+	h1 {
+
+		color: $white;
+		font-family:$headfont;
+		font-size:50px;
+		margin-left: -100%;
+
+			@include lg {
+
+				margin-left:-100%;
+			}
+
+			@include sm {
+
+				font-size: 60px;
+				text-align: center;
+				padding-top:40%;
+				padding-bottom:35%;
+				margin-right: -40%;
+				text-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+			}
+
+			@include xsm {
+
+				font-size: 10px;
+				text-align: center;
+				padding-top:40%;
+				padding-bottom:35%;
+			}
+
+		}
+
+
+/*button begin*/
+
+	button {
+		margin-left: -210px;
+		margin-top: 20px;
+		margin-top: 10px;
+		font-family:$pfont;
+
+
+/*md button collection queries*/
+
+		@include med {
+
+			font-size: 13px;
+			margin-left:-40%;
+			margin-top: 6%;
+
+		}
+
+		@include sm {
+
+			display: none;
+
+		}
+
+	}
+
+
+/*block col button*/
+
+	.smcol {
+
+		display:none;
+
+		@include sm {
+
+			width: 200%;
+			padding:15px;
+			font-family: $pfont;
+			color:black;
+			display:block;
+			background-color: white;
+			margin-left: -81%;
+
+		}
+
+		p {
+
+			display:none;
+
+
+			@include sm {
+
+				text-align: center;
+				display:block;
+				margin-top: 20px;
+				font-size: 40px;
+				margin-left: -7%;
+
+			}
+
+		}
+
+	}
+
+
+}
+
+
+
+.trend {
+
+	background-image: url(../images/home/trends.png);
+	background-position: center;
+	margin-top: 100px;
+	margin-bottom: 55px;
+	box-shadow: inset 23px 20px 23px rgba(0,0,0,0.5);
+
+	h1 {
+
+		color: $white;
+		font-family:$marker;
+		font-size:50px;
+		margin-left: 400px;
+		margin-top: 20px;
+
+		@include lg {
+
+				margin-left:10%;
+				font-size:70px;
+			}
+
+		@include med {
+
+				font-size: 45px;
+				margin-left:-10%;
+			}
+
+		@include sm {
+
+				font-size: 60px;
+				text-align: center;
+				padding-top:40%;
+				padding-bottom:35%;
+				margin-left: -45%;
+				text-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+		}
+
+	}
+
+	button {
+
+		margin-left: 630px;
+		margin-top: 20px;
+		margin-top: 10px;
+		font-family:$pfont;
+
+		@include lg {
+
+				margin-left:69%;
+			}
+
+		@include med {
+
+			font-size: 13px;
+			margin-left:41%;
+			margin-top: 5%;
+
+		}
+
+		@include sm {
+
+			display: none;
+
+		}
+
+		@include xsm {
+
+			display: none;
+
+		}
+
+	}
+
+	/*block col button*/
+
+	.trcol {
+
+		display:none;
+
+		@include sm {
+
+			width: 200%;
+			padding:15px;
+			font-family: $pfont;
+			color:black;
+			display:block;
+			background-color: white;
+			margin-left: -81%;
+
+		}
+
+		p {
+
+			display:none;
+
+
+			@include sm {
+
+				text-align: center;
+				display:block;
+				margin-top: 20px;
+				font-size: 40px;
+
+			}
+
+		}
+
+	}
+
+}
+
+
+.lookbook {
+
+	background-color:white;
+	padding: 0px !important;
+	margin-top: 55px;
+	padding-right: 10px !important;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+    @include sm {
+
+		margin-top: 0px;
+
+    }
+
+}
+
+
+
+	.image {
+
+		background-image: url(../images/home/lookbook.jpg);
+		background-position: 35% 35%;
+		background-size:cover;
+		padding:100px;
+		color:$bronze;
+		width:50%;
+		height: 50%;
+
+			h1 {
+				font-family: $headfont;
+				font-size: 60px;
+				margin-left:600px;
+				width:300px;
+				text-align: center;
+
+				@include xlg {
+
+					margin-left:170%;
+
+				}
+
+				@include lg {
+
+				margin-left:167%;
+
+				}
+
+				@include med {
+
+				font-size: 45px;
+				margin-left:190%;
+
+				}
+
+				@include sm {
+
+					margin-left:200%;
+					font-size:45px;
+
+				}
+
+				@include xsm {
+
+					margin-left:220%;
+					font-size:45px;
+
+				}
+
+			}
+
+			p {
+				margin-top: 50px;
+				font-family: $pfont;
+				font-size: 10px;
+				margin-left: 600px;
+			}
+
+	}
+
+.aboutus {
+	background-image: url(../images/home/texture2.jpg);
+	padding-top:36px;
+	margin-top: 55px;
+	padding-right: 80px;
+	padding-left: 80px;
+	padding-bottom: 200px;
+	padding-top: 200px;
+
+	h1 {
+		font-family: $headfont;
+		color:$white !important;
+		text-align: center;
+		font-size: 45px;
+	}
+
+	p {
+		font-family: $pfont;
+		color:$white !important;
+		font-size: 16px;
+		text-align: center;
+		margin-top: 30px;
+		line-height: 20px;
+	}
+}
+
+.botcontent {
+
+	background-color: $nav;
+	margin-top: -5px;
+	padding-top: 80px;
+	padding-bottom: 50px;
+
+	.banner1 {
+		background-color: $bronze;
+		padding: 25px;
+		margin-top: 80px;
+		text-align: center;
+		color:$white;
+
+		h1 {
+			font-family: $headfont;
+			font-size: 36px;
+
+			@include sm {
+
+				font-size: 25px;
+
+			}
+		}
+
+		p {
+			font-family: $pfont;
+			font-size: 16px;
+			margin-top: 10px;
+		}
+	}
+
+
+
+	.banner2 {
+			background-color: $chocolate;
+			padding: 25px;
+			margin-left: 10px;
+			margin-top: 80px;
+			text-align: center;
+
+		}
+
+	.move {
+
+		margin-left: 100px;
+
+		@include med {
+
+			margin-left: -7%;
+
+		}
+
+		@include sm {
+
+			margin-left: -4%;
+
+		}
+
+
+	}
+
+
+	.fa {
+		color:white;
+		margin-left: 60px;
+		margin-top: 10px;
+
+		@include lg {
+
+			margin-left:18%;
+			margin-top: 11%;
+
+		}
+
+		@include med {
+
+			margin-top: 20%;
+			margin-left:15%;
+
+		}
+
+		@include sm {
+
+			margin-top: 20%;
+			margin-left:11%;
+
+		}
+	}
+
+
+
+	.head {
+		color: $bronze;
+		font-family: $headfont;
+		font-size: 20px;
+
+
+		@include med {
+
+			line-height: 30px;
+
+
+		}
+
+		@include sm {
+
+			line-height: 20px;
+			font-size: 16px;
+			width: 150px;
+
+		}
+	}
+
+	li {
+		font-family: $pfont;
+		line-height: 20px;
+
+		@include med {
+
+			width:200px;
+			text-align: center;
+
+		}
+
+		@include sm {
+
+			font-size: 16px;
+			width: 150px;
+			text-align:center;
+
+		}
+	}
+
+	a {
+		color:rgba(0,0,0,.5);
+
+		@include med {
+
+			width:200px;
+			text-align: center;
+
+		}
+
+		@include sm {
+
+			font-size: 16px;
+			width: 150px;
+
+		}
+	}
+
+	a:hover{
+		text-decoration: none;
+		color:rgba(0,0,0,.7);
+	}
+
+}
+
+.footer {
+	background-color: $bronze;
+	padding: 8px;
+	color:white;
+	font-family: $cartfont;
+	font-size: 12px;
+	text-align: center;
+}
+
+.fa-angle-double-left, .fa-angle-double-right {
+	color:white;
+}
+
+/*shop styles*/
+
+.woodshop {
+
+	padding:50px;
+}
+
+.collectionHero {
+
+	background-image: url(../images/collection/herocol.png) !important;
+	box-shadow : inset 10px 10px 13px rgba(83,112,120,0.6);
+
+	h1 {
+
+		font-family: $headfont;
+		color: rgba(83,112,120, 1.0) !important;
+		font-size: 60px !important;
+		margin-left: 55%;
+		text-shadow: 1px 3px 6px rgba(86,113,125,0.6);
+	}
+
+}
+
+.gallery {
+
+	margin-top: 200px;
+	padding-bottom: 150px;
+
+
+	#stockItem {
+
+	padding:25px;
+	box-shadow: inset 23px 20px 23px rgba(0,0,0,0.5);
+
+	}
+
+	.col-3 {
+		display:inline;
+		margin-top: 20px;
+	}
+
+	.style {
+
+		padding : 123px;
+        box-shadow : inset 10px 10px 13px rgba(0,0,0,0.6);
+        border-radius : 10px;
+        margin-left: 20px;
+    	margin-right: 5px;
+	}
+
+}
+
+
