@@ -455,6 +455,19 @@ body {
 
 /*options code*/
 
+.men, .women, .accessories {
+
+	a {
+		color: $white;
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: rgba(255,255,255, 0.5);
+		text-decoration: none;
+	}
+}
+
 .men {
 	width:500px;
 	height:350px;
@@ -942,7 +955,6 @@ body {
 .aboutus {
 	background-image: url(../images/home/texture2.jpg);
 	padding-top:36px;
-	margin-top: 55px;
 	padding-right: 80px;
 	padding-left: 80px;
 	padding-bottom: 200px;
@@ -1550,6 +1562,67 @@ body {
 .menHero {
 
 	background-image: url(../images/menhero.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+	box-shadow : inset 10px 10px 13px rgba(0,0,0,0.6);
+	padding-top: 300px;
+	padding-bottom: 100px;
+
+	@include sm {
+
+		padding-top: 200px;
+		padding-bottom: 200px;
+
+		}
+
+	@include xsm {
+
+		padding-top: 200px;
+		padding-bottom: 200px;
+
+		}
+
+	h1 {
+
+		font-family: $headfont;
+		color: rgba(255,255,255, 1.0) !important;
+		font-size: 100px !important;
+		margin-left: 10%;
+		text-shadow: 1px 3px 6px rgba(0,0,0,0.6);
+
+		@include med {
+
+			font-size: 70px !important;
+			text-shadow: 1px 3px 6px rgba(0,0,0,0.6);
+			margin-left: 50%;
+
+		}
+
+		@include sm {
+
+			font-size: 90px !important;
+			text-shadow: 1px 3px 6px rgba(0,0,0,0.6);
+			margin-left: 0px;
+			text-align: center;
+
+		}
+
+		@include xsm {
+
+			font-size: 70px !important;
+			margin-left: 0px;
+			text-align: center;
+			text-shadow: 1px 3px 6px rgba(0,0,0,0.6);
+
+		}
+	}
+
+}
+
+.accessoriesHero {
+
+	background-image: url(../home/accessories.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top center;
