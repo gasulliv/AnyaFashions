@@ -4,7 +4,7 @@ console.log(window.location.pathname);
 
 function sort(){
 
-    if (window.location.pathname === "http://anyafashions.paperplane.io/routes/collection.html"){
+    if (window.location.pathname === "/AnyaFashions/routes/collection.html"){
 
         for (var i = 0, len = itemList.length; i < len; i++)
 
@@ -33,7 +33,7 @@ function sort(){
             }
         }
 
-    } else if (window.location.pathname === "http://anyafashions.paperplane.io/routes/trend.html") {
+    } else if (window.location.pathname === "/AnyaFashions/routes/trend.html") {
 
        for (var i = 0, len = itemList.length; i < len; i++)
 
@@ -61,7 +61,7 @@ function sort(){
 
             }
         }
-    } else if (window.location.pathname === "http://anyafashions.paperplane.io/routes/hunter.html") {
+    } else if (window.location.pathname === "/AnyaFashions/routes/hunter.html") {
 
         for (var i = 0, len = itemList.length; i < len; i++)
 
@@ -90,7 +90,7 @@ function sort(){
             }
         }
 
-    } else if (window.location.pathname === "http://anyafashions.paperplane.io/routes/men.html")
+    } else if (window.location.pathname === "/AnyaFashions/routes/men.html")
 
     {
 
@@ -121,7 +121,7 @@ function sort(){
             }
         }
 
-    } else if (window.location.pathname === "http://anyafashions.paperplane.io/routes/women.html") {
+    } else if (window.location.pathname === "/AnyaFashions/routes/women.html") {
 
         for (var i = 0, len = itemList.length; i < len; i++)
 
@@ -150,7 +150,7 @@ function sort(){
             }
         }
 
-    } else if (window.location.pathname === "http://anyafashions.paperplane.io/routes/accessories.html") {
+    } else if (window.location.pathname === "/AnyaFashions/routes/accessories.html") {
 
         for (var i = 0, len = itemList.length; i < len; i++)
 
