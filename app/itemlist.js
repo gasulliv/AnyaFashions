@@ -37,19 +37,6 @@ var itemList = [
                               "itemDep" : "accessories"
 
                             },
-                            {
-
-                              "itemImage":"../images/collection/dressplaceholder.png",
-
-                              "itemName" : "Knit Dress",
-
-                              "itemType": "dress",
-
-                              "itemClass": "collection",
-
-                              "itemDep" : "female"
-
-                            },
                             /*trend*/
                             {
 
@@ -74,19 +61,6 @@ var itemList = [
                               "itemClass": "trend",
 
                               "itemDep" : "male"
-
-                            },
-                            {
-
-                              "itemImage":"../images/trend/dressplaceholder.png",
-
-                              "itemName" : "Cozy Dress",
-
-                              "itemType": "dress",
-
-                              "itemClass": "trend",
-
-                              "itemDep" : "female"
 
                             },
                             {

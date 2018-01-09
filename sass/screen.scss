@@ -354,8 +354,6 @@ body {
 				padding-top:10%;
 				padding-bottom: 5%;
 				font-size: 60px;
-
-
 			}
 
 
@@ -372,8 +370,8 @@ body {
 				padding-bottom:50px;
 				font-size: 60px;
 				text-align: center;
+				padding-left:15px;
 				padding-right: 15px;
-				padding-left: 15px;
 
 			}
 
@@ -383,9 +381,8 @@ body {
 				padding-bottom:50px;
 				font-size: 60px;
 				text-align: center;
+				padding-left:15px;
 				padding-right: 15px;
-				padding-left: 15px;
-
 			}
 
 	}
@@ -535,7 +532,7 @@ body {
 .woodshop, .woodhome {
 
 	background-image: url(../images/home/texture.jpg);
-	background-repeat: repeat-x;
+	background-repeat: repeat;
 
 	}
 
@@ -635,7 +632,8 @@ body {
 				text-align: center;
 				padding-top:40%;
 				padding-bottom:35%;
-				margin-right: -40%;
+				padding-left:20%;
+				padding-right:0px;
 				text-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 			}
 
@@ -675,6 +673,12 @@ body {
 
 		}
 
+		@include xsm {
+
+			display: none;
+
+		}
+
 	}
 
 
@@ -696,12 +700,34 @@ body {
 
 		}
 
+		@include xsm {
+
+			width: 200%;
+			padding:15px;
+			font-family: $pfont;
+			color:black;
+			display:block;
+			background-color: white;
+			margin-left: -81%;
+
+		}
+
 		p {
 
 			display:none;
 
 
 			@include sm {
+
+				text-align: center;
+				display:block;
+				margin-top: 20px;
+				font-size: 40px;
+				margin-left: -7%;
+
+			}
+
+			@include xsm {
 
 				text-align: center;
 				display:block;
@@ -1116,20 +1142,91 @@ body {
 .woodshop {
 
 	padding:50px;
+	padding-bottom: 15%;
+
+	@include med {
+
+		padding-bottom: 25%;
+
+	}
+
+	@include sm {
+
+		padding-left:0px;
+		padding-right:0px;
+		padding-bottom: 25%;
+
+	}
+
+	@include xsm {
+
+		padding-left:0px;
+		padding-right:0px;
+		padding-bottom: 25%;
+
+	}
 }
 
 .collectionHero {
 
 	background-image: url(../images/collection/herocol.png) !important;
-	box-shadow : inset 10px 10px 13px rgba(83,112,120,0.6);
+	box-shadow : inset 10px 10px 13px rgba(0,0,0,0.6);
+
+	@include med {
+
+		padding-bottom: 20%;
+		padding-top:30%;
+
+	}
+
+	@include sm {
+
+		padding-top: 200px;
+		padding-bottom: 200px;
+
+		}
+
+	@include xsm {
+
+		padding-top: 200px;
+		padding-bottom: 200px;
+
+		}
 
 	h1 {
 
 		font-family: $headfont;
-		color: rgba(83,112,120, 1.0) !important;
+		color: rgba(255,255,255, 1.0) !important;
 		font-size: 60px !important;
 		margin-left: 55%;
 		text-shadow: 1px 3px 6px rgba(86,113,125,0.6);
+
+		@include med {
+
+			font-size: 40px !important;
+			margin-left: 40%;
+			text-shadow: 1px 3px 6px rgba(0,0,0,0.6);
+
+		}
+
+		@include sm {
+
+			font-size: 55px !important;
+			margin-left: 0px;
+			text-align: center;
+			text-shadow: 1px 3px 6px rgba(0,0,0,0.6);
+
+		}
+
+		@include xsm {
+
+			font-size: 55px !important;
+			margin-left: 0px;
+			text-align: center;
+			text-shadow: 1px 3px 6px rgba(0,0,0,0.6);
+
+		}
+
 	}
 
 }
@@ -1137,19 +1234,59 @@ body {
 .gallery {
 
 	margin-top: 200px;
-	padding-bottom: 150px;
+	/*padding-bottom: 150px;*/
+	align-content: center;
+	max-width: 100%;
 
+	@include xlg {
+
+		margin-left: -4%;
+
+		}
+
+
+	@include med {
+
+		margin-left: 0px;
+	}
+
+	@include sm {
+
+		margin-top: 0px;
+	}
+
+	@include xsm {
+
+    		display:block;
+			margin-top: 0px;
+			margin-left:-4%;
+    	}
+}
 
 	#stockItem {
 
 	padding:25px;
 	box-shadow: inset 23px 20px 23px rgba(0,0,0,0.5);
 
+
 	}
 
 	.col-3 {
 		display:inline;
 		margin-top: 20px;
+
+		@include sm {
+
+			display:block;
+			max-width: 100% !important;
+		}
+
+		@include xsm {
+    		display:block;
+			max-width: 100% !important;
+    	}
+
+
 	}
 
 	.style {
@@ -1159,8 +1296,314 @@ body {
         border-radius : 10px;
         margin-left: 20px;
     	margin-right: 5px;
+
+    	@include lg {
+
+			margin-left: 10px;
+
+    	}
+
+    	@include med {
+
+    		padding:15%;
+    		margin-left:2%;
+    	}
+
+    	@include sm {
+    		border-radius: 0px;
+    		padding : 55%;
+    		margin-left:0px;
+    	}
+
+    	@include xsm {
+    		padding: 55%;
+    		border-radius: 0px;
+    		margin-left:0px;
+    	}
+
+
+	}
+
+
+.titlediv {
+
+	display:none;
+
+	@include sm {
+
+		display: block;
+		padding: 10%;
+
+	}
+
+	@include xsm {
+
+		display: block;
+		padding: 10%;
+
+	}
+
+
+}
+
+/*trends jumbotron*/
+
+.jumbotron {
+
+	@include sm {
+
+		border-radius: 0px;
+
+		}
+
+	@include xsm {
+
+		border-radius: 0px;
+
+		}
+
+}
+
+/*trends hero*/
+
+.trendsHero {
+
+	background-image: url(../images/home/trends.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+	box-shadow : inset 10px 10px 13px rgba(0,0,0,0.6);
+	padding-top: 300px;
+	padding-bottom: 100px;
+
+	@include sm {
+
+		padding-top: 200px;
+		padding-bottom: 200px;
+
+		}
+
+	@include xsm {
+
+		padding-top: 200px;
+		padding-bottom: 200px;
+
+		}
+
+	h1 {
+
+		font-family: $marker;
+		color: rgba(255,255,255, 1.0) !important;
+		font-size: 60px !important;
+		margin-left: 55%;
+		text-shadow: 1px 3px 6px rgba(0,0,0,0.6);
+
+		@include sm {
+
+			font-size: 70px !important;
+			text-shadow: 1px 3px 6px rgba(0,0,0,0.6);
+			margin-left: 0px;
+			text-align: center;
+
+		}
+
+		@include xsm {
+
+			font-size: 70px !important;
+			margin-left: 0px;
+			text-align: center;
+			text-shadow: 1px 3px 6px rgba(0,0,0,0.6);
+
+		}
 	}
 
 }
 
+/*hunter hero*/
 
+.hunterHero {
+
+	background-image: url(../images/hunter/hunterhero.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	box-shadow : inset 10px 10px 13px rgba(0,0,0,0.6);
+	padding-top: 300px;
+	padding-bottom: 60px;
+
+	@include sm {
+
+		padding-top: 200px;
+		padding-bottom: 200px;
+
+		}
+
+	@include xsm {
+
+		padding-top: 200px;
+		padding-bottom: 200px;
+
+		}
+
+	h1 {
+
+		font-family: $marker;
+		color: rgba(255,255,255, 1.0) !important;
+		font-size: 100px !important;
+		margin-left: 55%;
+		text-shadow: 1px 3px 6px rgba(0,0,0,0.6);
+
+		@include med {
+
+			font-size: 70px !important;
+			text-shadow: 1px 3px 6px rgba(0,0,0,0.6);
+			margin-left: 50%;
+
+		}
+
+		@include sm {
+
+			font-size: 90px !important;
+			text-shadow: 1px 3px 6px rgba(0,0,0,0.6);
+			margin-left: 0px;
+			text-align: center;
+
+		}
+
+		@include xsm {
+
+			font-size: 70px !important;
+			margin-left: 0px;
+			text-align: center;
+			text-shadow: 1px 3px 6px rgba(0,0,0,0.6);
+
+		}
+	}
+
+}
+
+/*hunter hero*/
+
+.womenHero {
+
+	background-image: url(../images/womenhero.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+	box-shadow : inset 10px 10px 13px rgba(0,0,0,0.6);
+	padding-top: 300px;
+	padding-bottom: 100px;
+
+	@include sm {
+
+		padding-top: 200px;
+		padding-bottom: 200px;
+
+		}
+
+	@include xsm {
+
+		padding-top: 200px;
+		padding-bottom: 200px;
+
+		}
+
+	h1 {
+
+		font-family: $headfont;
+		color: rgba(255,255,255, 1.0) !important;
+		font-size: 100px !important;
+		margin-left: 55%;
+		text-shadow: 1px 3px 6px rgba(0,0,0,0.6);
+
+		@include med {
+
+			font-size: 70px !important;
+			text-shadow: 1px 3px 6px rgba(0,0,0,0.6);
+			margin-left: 50%;
+
+		}
+
+		@include sm {
+
+			font-size: 90px !important;
+			text-shadow: 1px 3px 6px rgba(0,0,0,0.6);
+			margin-left: 0px;
+			text-align: center;
+
+		}
+
+		@include xsm {
+
+			font-size: 70px !important;
+			margin-left: 0px;
+			text-align: center;
+			text-shadow: 1px 3px 6px rgba(0,0,0,0.6);
+
+		}
+	}
+
+}
+
+/*hunter hero*/
+
+.menHero {
+
+	background-image: url(../images/menhero.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+	box-shadow : inset 10px 10px 13px rgba(0,0,0,0.6);
+	padding-top: 300px;
+	padding-bottom: 100px;
+
+	@include sm {
+
+		padding-top: 200px;
+		padding-bottom: 200px;
+
+		}
+
+	@include xsm {
+
+		padding-top: 200px;
+		padding-bottom: 200px;
+
+		}
+
+	h1 {
+
+		font-family: $headfont;
+		color: rgba(255,255,255, 1.0) !important;
+		font-size: 100px !important;
+		margin-left: 10%;
+		text-shadow: 1px 3px 6px rgba(0,0,0,0.6);
+
+		@include med {
+
+			font-size: 70px !important;
+			text-shadow: 1px 3px 6px rgba(0,0,0,0.6);
+			margin-left: 50%;
+
+		}
+
+		@include sm {
+
+			font-size: 90px !important;
+			text-shadow: 1px 3px 6px rgba(0,0,0,0.6);
+			margin-left: 0px;
+			text-align: center;
+
+		}
+
+		@include xsm {
+
+			font-size: 70px !important;
+			margin-left: 0px;
+			text-align: center;
+			text-shadow: 1px 3px 6px rgba(0,0,0,0.6);
+
+		}
+	}
+
+}
